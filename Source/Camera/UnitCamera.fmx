@@ -1,0 +1,102 @@
+object FrmCamera: TFrmCamera
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 548
+  ClientWidth = 363
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object CameraComponent: TCameraComponent
+    OnSampleBufferReady = CameraComponentSampleBufferReady
+    Left = 168
+    Top = 200
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 363.000000000000000000
+    Size.Height = 548.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Layout2: TLayout
+      Align = Client
+      Size.Width = 363.000000000000000000
+      Size.Height = 496.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Layout31: TLayout
+        Align = Top
+        Size.Width = 363.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object Rectangle16: TRectangle
+          Align = Client
+          Fill.Color = claBlack
+          Size.Width = 363.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          object Label1: TLabel
+            Align = Contents
+            StyledSettings = [Family, Size, Style]
+            Size.Width = 363.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = 'Leitura QrCode'
+            TabOrder = 0
+          end
+          object btnVoltar: TSpeedButton
+            Align = Left
+            Size.Width = 81.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'backtoolbutton'
+            Text = 'Voltar'
+            OnClick = btnVoltarClick
+          end
+        end
+      end
+      object img_camera: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Align = Client
+        Size.Width = 363.000000000000000000
+        Size.Height = 463.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object Layout3: TLayout
+      Align = Bottom
+      Position.Y = 496.000000000000000000
+      Size.Width = 363.000000000000000000
+      Size.Height = 52.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object lbl_erro: TLabel
+        Align = Top
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 363.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFFD00F0F
+        TextSettings.HorzAlign = Center
+        TabOrder = 0
+      end
+      object pb1: TProgressBar
+        Align = Client
+        Orientation = Horizontal
+        Size.Width = 363.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+end

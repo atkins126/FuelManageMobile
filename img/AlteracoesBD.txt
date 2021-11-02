@@ -1,0 +1,30 @@
+CREATE TABLE public.cultura (
+	id serial NOT NULL,
+	status int4 NOT NULL DEFAULT 1,
+	dataregistro timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	idusuario int4 NOT NULL,
+	dataalteracao timestamp NULL,
+	idusuarioalteracao int4 NULL,
+	nome varchar(100) null,
+	CONSTRAINT cultura_pkey PRIMARY KEY (id));
+
+
+ALTER TABLE public.areautil ADD idcultura integer NOT NULL;
+ALTER TABLE public.areautil ADD idatividade integer NOT NULL;
+
+
+
+COMMENT ON COLUMN public.cultura.idatividade IS '1= Pecuaria 2= Agricultura';
+
+
+ALTER TABLE public.planodecontascliente ADD idatividade integer NOT NULL DEFAULT 1;
+COMMENT ON COLUMN public.planodecontascliente.idatividade IS '1=pecuaria 2=agricultura 3=Rateio';
+
+ALTER TABLE public.planodecontascliente ADD percentpecuaria numeric(15,3) NOT NULL DEFAULT 0;
+ALTER TABLE public.planodecontascliente ADD percentagricultura numeric(15,3) NOT NULL DEFAULT 0;
+
+ALTER TABLE public.lancamentosfinanceiros ADD percentpecuaria numeric(15,3) NOT NULL DEFAULT 0;
+ALTER TABLE public.lancamentosfinanceiros ADD percentagricultura numeric(15,3) NOT NULL DEFAULT 0;
+
+
+
