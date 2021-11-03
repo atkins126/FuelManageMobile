@@ -148,6 +148,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="..\..\..\Deploy\classes.dex" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Fuel_Manage\classes\</RemoteDir>
+            <RemoteName>classes.dex</RemoteName>
+            <DeployClass>AndroidClassesDexFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_96x96.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>Fuel_Manage\res\drawable-xxxhdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
@@ -157,7 +166,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Android\Debug\AndroidManifest.xml" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="..\..\..\Deploy\AndroidManifest.xml" Condition="'$(Config)'=='Debug'">
             <RemoteDir>Fuel_Manage\</RemoteDir>
             <RemoteName>AndroidManifest.xml</RemoteName>
             <DeployClass>ProjectAndroidManifest</DeployClass>
@@ -202,7 +211,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Android\Debug\colors.xml" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="..\..\..\Deploy\colors.xml" Condition="'$(Config)'=='Debug'">
             <RemoteDir>Fuel_Manage\res\values\</RemoteDir>
             <RemoteName>colors.xml</RemoteName>
             <DeployClass>Android_Colors</DeployClass>
@@ -238,7 +247,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Android\Debug\provider_paths.xml" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="..\..\..\Deploy\provider_paths.xml" Condition="'$(Config)'=='Debug'">
             <RemoteDir>Fuel_Manage\res\xml\</RemoteDir>
             <RemoteName>provider_paths.xml</RemoteName>
             <DeployClass>AndroidFileProvider</DeployClass>
@@ -247,7 +256,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Android\Debug\strings.xml" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="..\..\..\Deploy\strings.xml" Condition="'$(Config)'=='Debug'">
             <RemoteDir>Fuel_Manage\res\values\</RemoteDir>
             <RemoteName>strings.xml</RemoteName>
             <DeployClass>Android_Strings</DeployClass>
@@ -319,7 +328,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Android\Debug\libFuel_Manage.so" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="..\..\..\Deploy\libFuel_Manage.so" Condition="'$(Config)'=='Debug'">
             <RemoteDir>Fuel_Manage\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libFuel_Manage.so</RemoteName>
             <DeployClass>ProjectOutput</DeployClass>
